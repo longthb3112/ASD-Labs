@@ -15,7 +15,7 @@ public class JDBCFacade implements IJDBCFacade{
             prep.setString(1, "<column value>");
             rset = prep.executeQuery();
             if (rset.next()) {
-                System.out.println(rset.getString("<column name"));
+                System.out.println(rset.getString("<column name>"));
             }
         }
         finally {
