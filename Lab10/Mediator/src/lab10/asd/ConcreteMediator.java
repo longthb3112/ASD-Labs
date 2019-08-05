@@ -23,7 +23,7 @@ public class ConcreteMediator implements Mediator {
         scanDirectionNorthWest(x,y,color);
         scanDirectionSouthWest(x,y,color);
         scanDirectionSouthEast(x,y,color);
-        System.out.println("Client played");
+        sendMessage();
         for (int[] arr : Chess.chess) {
             System.out.println(Arrays.toString(arr));
         }
@@ -140,6 +140,14 @@ public class ConcreteMediator implements Mediator {
     }
     @Override
     public void sendMessage() {
-
+        for(Player player:players){
+            player.receive();
+        }
     }
+
+    @Override
+    public void addPlayer(Player player) {
+        players.add(player);
+    }
+
 }

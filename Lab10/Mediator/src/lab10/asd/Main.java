@@ -7,6 +7,9 @@ public class Main {
         Mediator mediator = new ConcreteMediator();
         Client client1 = new Client(1,mediator);
         Client client2 = new Client(2,mediator);
+        mediator.addPlayer(client1);
+        mediator.addPlayer(client2);
+
         client1.play(2,2);
 
         client2.play(2,3);

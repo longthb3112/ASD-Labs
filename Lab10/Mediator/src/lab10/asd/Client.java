@@ -9,7 +9,7 @@ public class Client extends Player{
 
     @Override
     void receive() {
-        System.out.println("saw view changed!!!");
+        System.out.println("Client saw view changed!!!");
     }
 
     @Override
